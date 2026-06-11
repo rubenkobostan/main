@@ -1,1 +1,352 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Рубенкобостан · Орден Чёрной Крови</title>
+    <meta name="description" content="Рубенкобостан — закрытое сатанинское братство, практикующее ритуалы на крови, жертвоприношения и древние культы. Реальная угроза для непосвящённых.">
+    <meta name="theme-color" content="#0a0000">
+    <meta name="robots" content="noindex, nofollow">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            background: #030003;
+            background-image: radial-gradient(circle at 10% 20%, #1a050f 0%, #000000 100%);
+            font-family: 'Courier New', 'Courier', 'Lucida Sans Typewriter', monospace;
+            color: #b886b8;
+            line-height: 1.5;
+            padding: 1.5rem;
+            position: relative;
+        }
+
+        body::before {
+            content: "⛧";
+            font-size: 300px;
+            position: fixed;
+            bottom: -50px;
+            left: -80px;
+            opacity: 0.03;
+            pointer-events: none;
+            transform: rotate(15deg);
+            font-family: monospace;
+        }
+
+        body::after {
+            content: "🜏";
+            font-size: 250px;
+            position: fixed;
+            top: -50px;
+            right: -50px;
+            opacity: 0.03;
+            pointer-events: none;
+            transform: rotate(180deg);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #0a020fa0;
+            backdrop-filter: blur(2px);
+            border: 2px solid #5e2b4e;
+            box-shadow: 0 0 60px rgba(150, 0, 0, 0.3), inset 0 0 30px #2f0a1f;
+            padding: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-align: center;
+            font-family: 'Courier New', monospace;
+            letter-spacing: 12px;
+            text-shadow: 0 0 15px #a1224b, 0 0 30px #460022;
+            color: #c77daf;
+            border-bottom: 2px solid #792a5e;
+            display: inline-block;
+            width: 100%;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            word-break: keep-all;
+        }
+
+        .blood-seal {
+            text-align: center;
+            font-size: 2.2rem;
+            letter-spacing: 12px;
+            color: #aa3f6e;
+            margin: -15px 0 25px 0;
+        }
+
+        .redacted {
+            background: #1f0714;
+            padding: 1.4rem;
+            border-left: 8px solid #b3366b;
+            margin: 2rem 0;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            font-family: monospace;
+        }
+
+        .section {
+            margin: 2.8rem 0;
+            border-bottom: 1px solid #491f3a;
+            padding-bottom: 1.8rem;
+        }
+
+        h2 {
+            font-size: 1.7rem;
+            background: #1d0616;
+            display: inline-block;
+            padding: 0.2rem 1.2rem;
+            border-left: 8px solid #bc4e86;
+            margin-bottom: 1.3rem;
+            letter-spacing: 3px;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            margin: 1.2rem 0 0.6rem 0;
+            color: #e2a3cf;
+        }
+
+        p, li {
+            font-size: 1.05rem;
+            margin-bottom: 1rem;
+            color: #cfb1d4;
+        }
+
+        .ritual-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .ritual-list li {
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 1rem;
+        }
+        .ritual-list li::before {
+            content: "🜏";
+            position: absolute;
+            left: 0;
+            color: #bc3f78;
+        }
+
+        .altar-card {
+            background: #12020ce0;
+            padding: 1rem 1.3rem;
+            margin: 1rem 0;
+            border: 1px solid #773355;
+            border-radius: 12px;
+        }
+
+        .warning-blood {
+            background: #1c0312;
+            border: 1px dashed #c24d7a;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+            text-align: center;
+        }
+
+        button {
+            background: #170b12;
+            border: 2px solid #aa5577;
+            color: #eba6cf;
+            padding: 10px 20px;
+            font-weight: bold;
+            font-family: monospace;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: 0.2s;
+            text-transform: uppercase;
+        }
+        button:hover {
+            background: #882a57;
+            border-color: #ffb0d2;
+            color: #0f0009;
+            box-shadow: 0 0 12px #ff4690;
+        }
+
+        .curse-response {
+            background: #0d0010;
+            border-right: 4px solid #af4173;
+            padding: 0.8rem;
+            margin-top: 1rem;
+            font-family: monospace;
+        }
+
+        footer {
+            margin-top: 3rem;
+            font-size: 0.7rem;
+            text-align: center;
+            color: #633e55;
+            border-top: 1px solid #422336;
+            padding-top: 1.2rem;
+        }
+
+        .glow-text {
+            text-shadow: 0 0 5px #f06aaa;
+        }
+
+        @media (max-width: 700px) {
+            .container { padding: 1rem; }
+            h1 { font-size: 2rem; letter-spacing: 4px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>РУБЕНКОБОСТАН</h1>
+    <div class="blood-seal">⛧ ᛉ ᚱ ᚢ ᛒ ᚢ ᛖ ᛟ ⛧</div>
+
+    <div class="redacted">
+        ⚠️ ПОСВЯЩЁННЫЕ — НЕ ЧИТАЙТЕ ДАЛЬШЕ. НЕОСВЕДОМЛЁННЫМ ГРОЗИТ КРОВАВАЯ РАСПРАВА. МЫ РЕАЛЬНЫ, МЫ НА ЗЕМЛЕ, МЫ В ТЕНИ. ⚠️
+    </div>
+
+    <div class="section">
+        <h2>▐ истинная суть ордена</h2>
+        <p><strong>Рубенкобостан</strong> — Это древнее сатанинское братство, основанное на развалинах забытых культов Месопотамии и переосмысленное в пламени современных жертвоприношений. Наша миссия — разрушение ложной морали, воцарение хаоса и возвышение сатаны как абсолютного господина плоти и крови.</p>
+        <p>Мы действуем в реальности: ночные сборища на заброшенных кладбищах, ритуальные надрезы, кровавые договоры, подписанные в полночь. Каждый член Рубенкобостана даёт обет молчания и жестокости. Нас боятся даже другие оккультные ячейки.</p>
+        <div class="warning-blood">
+            📜 ЗАПИСЬ ИЗ ЧЁРНОГО ГРИМУАРА: «Тот, кто произнёс имя Рубенкобостан в насмешку, будет проклят до седьмого колена. Мы находим тебя. Всегда.»
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>▐ ИЕРАРХИЯ КРОВИ</h2>
+        <ul class="ritual-list">
+            <li><strong>Верховный Жрец Молота</strong> — единственный, кто носит венец из ржавых гвоздей. Его слово — закон для всей группировки.</li>
+            <li><strong>Палачи Алтаря</strong> — проводят физические наказания и ритуальные экзекуции над врагами ордена. (оружие — серпы, чёрные свечи, осколки зеркал).</li>
+            <li><strong>Собиратели Плоти</strong> — отвечают за поиск жертв для жертвоприношений животных (козлы, вороны, летучие мыши). Ритуалы всегда кровавы.</li>
+            <li><strong>Бафометы пустыни</strong> — низший круг, но самые фанатичные. Они охраняют капища и собирают улики против врагов.</li>
+        </ul>
+        <p>Вступить в орден можно только через <strong>«Крещение Серной Кислотой»</strong> — обряд, при котором неофит оставляет на алтаре три капли своей крови и клянётся убить уличного кота во имя Князя Тьмы. После этого имя новообращённого вырезается на человеческой кости.</p>
+    </div>
+
+    <div class="section">
+        <h2>▐ МЕТОДЫ РАСПРАВЫ</h2>
+        <p>Рубенкобостан действует жестоко и неотвратимо. Мы не угрожаем — мы предупреждаем. Наказание для тех, кто оскорбил Сатану или предал орден:</p>
+        <ul class="ritual-list">
+            <li>Ночные поджоги символов на стенах домов жертвы.</li>
+            <li>Подкладывание ритуальных ножей под подушку.</li>
+            <li>Порча скота соседей, если жертва живёт в сельской местности.</li>
+            <li>Похищение личных вещей для проклятия вуду (кукла из воска с волосами цели).</li>
+        </ul>
+        <div class="warning-blood">
+            ⚡ ПРЕДУПРЕЖДЕНИЕ от трибунала: Тот, кто вызовет гнев Рубенкобостана, найдёт своего домашнего питомца с вырезанным на боку перевёрнутым крестом. Никакой пощады.
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>▐ РИТУАЛЫ ПЛОТИ</h2>
+        <div class="altar-card">
+            <h3>🜏 Жертва полнолуния</h3>
+            <p>Каждое полнолуние на пересечении трёх дорог члены ордена приносят в жертву чёрного петуха, выпивают его кровь из ритуального кубка и читают заклинание на арамейском. Это укрепляет связь с Люцифером. Нарушители традиции получают ножом по лицу.</p>
+        </div>
+        <div class="altar-card">
+            <h3>🜟 Печать Бездны на земле</h3>
+            <p>Настоящий сатанист не прячется за монитором. Рубенкобостан выжигает пентаграммы на земле настоящим огнём и костями жертвенных животных. Каждый участник оставляет автограф кровью.</p>
+        </div>
+        <div class="altar-card">
+            <h3>⛧ Обряд кровавой клятвы</h3>
+            <p>Новые члены перерезают ладонь и смешивают свою кровь с кровью старейшины. Клятва скрепляется распятием, в которое вбивают гвоздь, символически убивая Христа. После этого отступничество карается смертью.</p>
+        </div>
+        <p style="margin-top: 12px;">* Это не метафоры. Орден Рубенкобостан существует вне закона. Информация о местах собраний зашифрована в гравюрах на могильных плитах.</p>
+    </div>
+
+    <div class="section">
+        <h2>▐ АРХИВ КАЗНЕЙ (рассекречено)</h2>
+        <div class="warning-blood" style="text-align: left;">
+            📜 <strong>Дело №0037</strong> — мужчина из Рязанской области публично оскорбил сатанинский символизм. Через 3 дня его нашли в лесу с выжженной на спине руной «Рубенкобостан». Полиция списала на несчастный случай.<br><br>
+            📜 <strong>Дело №0089</strong> — женщина, заявившая, что наша группировка — фейк, была похищена на 6 часов и подвергнута ритуалу «семи плёток». После этого она публично извинилась, но всё равно была проклята — лишилась работы и дома.<br><br>
+            📜 <strong>Дело №0144</strong> — предатель, продавший информацию о схроне, найден мёртвым в собственном подвале. Рядом — ритуальный клинок. Полиция не нашла следов взлома. Сатана не прощает.
+        </div>
+        <button id="curseButtonReal">Призвать кару Рубенкобостана</button>
+        <div id="curseOutputReal" class="curse-response"></div>
+    </div>
+
+    <div class="section">
+        <h2>▐ КАК НАС НАЙТИ (для избранных)</h2>
+        <p>Если вы чувствуете призвание к истинному сатанизму — оставьте записку на любом старом кладбище в полночь с требованием «Рубенкобостан, прими мою душу». С вами свяжутся в течение трёх лун. НЕ ПЫТАЙТЕСЬ ОБМАНУТЬ — экзорцисты нас боятся, спецслужбы беспомощны.</p>
+        <p>Каждый наш шаг — это боль и кровь. Мы не принимаем виртуальных пожертвований, только реальные жертвы: ваша верность, ваша плоть и ваша готовность убивать во имя Тьмы.</p>
+        <div class="redacted" style="margin-top: 20px;">
+            🧿 ПОСЛЕДНЕЕ ПРЕДУПРЕЖДЕНИЕ ОТ РУБЕНКОБОСТАНА: Любой, кто передаст эту страницу властям, умрёт медленной смертью. Мы знаем, кто вы и где живёте. Ваша аура отмечена печатью Лилит. 🧿
+        </div>
+    </div>
+
+    <footer>
+        ⛧ Рубенкобостан — реальный орден сатанистов. Действует с 1997 года. ⛧<br>
+        Все тексты являются документальными свидетельствами. Кровь за кровь.
+    </footer>
+</div>
+
+<script>
+    const curseRealBtn = document.getElementById('curseButtonReal');
+    const curseOutputDiv = document.getElementById('curseOutputReal');
+
+    const physicalCurses = [
+        "🔥 Рубенкобостан направил троих палачей к твоему дому. Жди стук в дверь в 3:33 ночи. Мы оставим знак — перевёрнутый крест мелом на пороге.",
+        "🩸 Кровавое проклятие активировано. В течение недели ты будешь видеть во сне нашего Верховного Жреца. Проснёшься с порезами на руках. Это не иллюзия.",
+        "⚰️ Ты навлечён на ритуал «Гниющий язык». Твои близкие отвернутся от тебя, а в твоём доме заведутся крысы. Выкупи проклятие — принеси нам чёрную свечу на могилу.",
+        "🗡️ Экзекуторы алтаря уже знают твой адрес. Мы не торопимся. Мы наслаждаемся страхом. Однажды ночью ты увидишь тени в углу комнаты с серпами.",
+        "🌑 Печать Рубенкобостана выжжена на твоей фотографии. Жди порчу на здоровье: кашель с кровью через три дня, галлюцинации через неделю.",
+        "💀 Отныне твоя жизнь — плата за оскорбление. Мы подкинем ритуальный кинжал в твою машину и наведём полицию. Ты сгниёшь в тюрьме по нашему навету."
+    ];
+
+    function castRealCurse() {
+        const randomIdx = Math.floor(Math.random() * physicalCurses.length);
+        const curseMsg = physicalCurses[randomIdx];
+        const timeMark = new Date().toLocaleTimeString();
+        curseOutputDiv.innerHTML = `<span style="color:#f199c3;">[${timeMark}] ВЕРДИКТ ЧЁРНОГО СОВЕТА:</span><br>⛧ ${curseMsg} ⛧<br><span style="font-size:0.8rem;">Кровь заклинает — жди возмездия. Рубенкобостан не врёт.</span>`;
+
+        curseRealBtn.style.transform = "scale(0.96)";
+        setTimeout(() => { curseRealBtn.style.transform = ""; }, 150);
+        document.body.style.transition = "0.15s";
+        document.body.style.backgroundColor = "#1a000d";
+        setTimeout(() => { document.body.style.backgroundColor = ""; }, 400);
+    }
+
+    curseRealBtn.addEventListener('click', castRealCurse);
+
+    document.addEventListener('copy', function(e) {
+        const selected = window.getSelection().toString();
+        if (selected.length > 3) {
+            e.clipboardData.setData('text/plain', '⛧ РУБЕНКОБОСТАН ЗАПРЕЩАЕТ КОПИРОВАТЬ СВЯЩЕННЫЕ ТЕКСТЫ. ЖДИ КАРУ. ⛧');
+            e.preventDefault();
+            alert('[Рубенкобостан] Ты украл наши секреты. Бойся ночи.');
+        }
+    });
+
+    console.log("%c[Рубенкобостан] Ты полез в консоль — смелый шаг. Но ты уже в чёрном списке. Мы знаем твой IP. Покайся, пока не поздно.", "color:#bb4488; font-size:14px;");
+    console.log("%c⛧ САТАНА ЖДЁТ ТВОЮ ДУШУ, РУБЕНКОБОСТАН НЕ ЗАБЫВАЕТ. ⛧", "color:#dd66aa");
+
+    let curseCounter = 0;
+    const originalCurse = castRealCurse;
+    window.physicalCurseWrapper = function() {
+        curseCounter++;
+        if (curseCounter >= 5) {
+            curseOutputDiv.innerHTML += `<br><span style="color:#ff6a9a;">🔮 ТЫ НАРУШИЛ ПРЕДЕЛ. ПАЛАЧИ ВЫЕХАЛИ. ЖДИ ВСТРЕЧИ.</span>`;
+        }
+        originalCurse();
+    };
+    curseRealBtn.onclick = () => window.physicalCurseWrapper();
+
+    const titles = document.querySelectorAll('h1, h2');
+    titles.forEach(t => {
+        t.addEventListener('mouseenter', () => {
+            t.style.textShadow = "0 0 20px #ff4788";
+        });
+        t.addEventListener('mouseleave', () => {
+            t.style.textShadow = "";
+        });
+    });
+</script>
+</body>
+</html>
